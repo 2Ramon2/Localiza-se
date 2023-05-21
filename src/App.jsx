@@ -15,7 +15,7 @@ export function App() {
     inputRef.current.focus();
   }, []);
 
-  async function getCepInfo() {
+  async function getZipInfo() {
     if (zip.length === 0) {
       setError("Insira um cep");
       return;
@@ -48,7 +48,7 @@ export function App() {
 
   function handleSubmitForm(e) {
     e.preventDefault();
-    getCepInfo();
+    getZipInfo();
     setZip("");
     setZipData(null);
   }
