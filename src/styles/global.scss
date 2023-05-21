@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+
+
+    background: rgb(9,65,121);
+    background: -moz-radial-gradient(circle, rgba(9,65,121,1) 50%, rgba(9,65,121,1) 68%);
+    background: -webkit-radial-gradient(circle, rgba(9,65,121,1) 50%, rgba(9,65,121,1) 68%);
+    background: radial-gradient(circle, rgba(9,65,121,1) 50%, rgba(9,65,121,1) 68%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#094179",endColorstr="#094179",GradientType=1);
+}
+
+button {
+    display: block;
+
+    cursor: pointer;
+    border: none;
+}
+
+input {
+    font-size: inherit;
+    border: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}

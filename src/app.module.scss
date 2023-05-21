@@ -1,0 +1,256 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  max-width: 500px;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: #fff;
+  }
+
+  @media (max-width: 720px) {
+    padding: 0 1rem;
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+.container form {
+  margin-top: 2rem;
+}
+
+.formContent {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+  border: 2px solid #a60f0f;
+  border-radius: 20rem;
+  background: #1a63ad;
+
+  input {
+    flex: 1;
+    background: transparent;
+    font-size: 2rem;
+    color: #fff;
+    height: 100%;
+
+    &::placeholder {
+      font-size: 1.5rem;
+      color: #dcdcdc;
+    }
+
+    @media (max-width: 720px) {
+      width: 100%;
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    height: 100%;
+
+    button {
+      display: flex;
+      align-items: center;
+      background: transparent;
+      transition: scale 0.2s;
+      height: 100%;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 40px;
+      background: #ccc;
+    }
+  }
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  width: max-content;
+  flex-grow: 0;
+  gap: 0.5rem;
+
+  color: #a60f0f;
+  font-size: 1rem;
+
+  background: #fff;
+
+  border: 2px solid #a60f0f;
+  border-radius: 20rem;
+
+  margin-top: 0.5rem;
+  padding: 0.2rem 1rem;
+}
+
+.addressDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+  border: 2px solid #a60f0f;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+
+  position: relative;
+
+  h2 {
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+
+    span {
+      color: #a60f0f;
+    }
+  }
+  img {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 0.25rem;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  button {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: transparent;
+    svg {
+      background: #333;
+      border-radius: 50%;
+    }
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+      border: none;
+    }
+  }
+
+  @media (max-width: 720px) {
+    width: 100%;
+  }
+}
+
+.addressDetailsContent {
+  p {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #333;
+
+    span a {
+      margin-left: 0.5rem;
+    }
+
+    span:first-child {
+      margin-right: 0.25rem;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #a60f0f;
+    }
+
+    & > a {
+      margin-left: 0.5rem;
+    }
+  }
+
+  @media (max-width: 720px) {
+    p {
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+
+      span:first-child {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+.slideInFwdCenter {
+  -webkit-animation: slideInFwdCenter 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slideInFwdCenter 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slideInFwdCenter {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFwdCenter {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.horizontalShake {
+  animation: horizontalShaking 0.35s;
+}
+
+@keyframes horizontalShaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
